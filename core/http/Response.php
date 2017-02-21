@@ -21,7 +21,7 @@ class Response{
      */
     public static function view(string $view, array $data){
         extract($data);
-        include ROOT_DIR."/app/view/{$view}.php";
+        include ROOT_DIR."app/view/{$view}.php";
     }
 
     /**
