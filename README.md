@@ -38,10 +38,10 @@ You will need to have the Composer installed and PHP 7.0 or superior.
 
 Or you can clone de project
 
-$ git clone https://github.com/1fabiosoares/FastFlight.git
-$ cd FastFlight
-$ composer install
-$ cd www
-$ php -S localhost:8000
+    $ git clone https://github.com/1fabiosoares/FastFlight.git
+    $ cd FastFlight
+    $ composer install
+    $ cd www
+    $ php -S localhost:8000
 
 And you ready to go! :)
