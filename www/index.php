@@ -1,8 +1,8 @@
 <?php
 /**
  * FastFlight
- * Getting Started Fast with FlightPHP
- *
+ * Using Flight microframework efficiently.
+ * https://github.com/1fabiosoares/fastflight
  */
 
 require "../app.php";

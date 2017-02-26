@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mateus
- * Date: 21/02/17
- * Time: 13:46
- */
-
 namespace core\http;
 
 /**
