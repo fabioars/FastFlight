@@ -24,7 +24,7 @@ class Response{
     public static function json($data) : string{
         Header::set("Content-Type", "application/json");
 
-        $json = json_decode($data, JSON_PARTIAL_OUTPUT_ON_ERROR);
+        $json = json_encode($data, JSON_PARTIAL_OUTPUT_ON_ERROR);
         echo $json;
         return $json;
     }

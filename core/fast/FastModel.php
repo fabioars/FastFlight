@@ -46,22 +46,26 @@ class FastModel{
     public function update($primaryKey, array $data){
         if($this->find($primaryKey)){
             $columns = array_keys($data);
+            $values  = array_values($data);
             $columnsValues = array_keys($data);
 
             foreach ($columnsValues as $key => $value)
                 $columnsValues[$key] = ":".$value;
-
+            $values = array_combine($columnsValues, $values);
             $set = [];
             for($i = 0; $i < sizeof($columns); $i++){
+
                 $set[] = "{$columns[$i]} = {$columnsValues[$i]}";
             }
             $set = implode(",", $set);
             $sql = "UPDATE {$this->table} SET {$set} WHERE {$this->primaryKey} = :pkvalue;";
-            echo $sql;
+
             $stmt = $this->db->prepare($sql);
 
-            foreach ($columnsValues as $key)
-                $stmt->bindValue($key, $data[$key]);
+            foreach ($columnsValues as $key){
+
+                $stmt->bindValue($key, $values[$key]);
+            }
 
             $stmt->bindValue(":pkvalue", $primaryKey);
             return $stmt->execute();
