@@ -1,5 +1,5 @@
 <?php
-namespace core\http;
+namespace core\lib;
 
 /**
  * Class Session
